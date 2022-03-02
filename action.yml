@@ -1,0 +1,47 @@
+---
+name: 'gpgsign'
+description: 'Sign artifacts or any file with GnuPG'
+author: 'actionhippie'
+
+inputs:
+  private_key:
+    description: |
+      Private GPG key used for signing
+    required: true
+
+  passphrase:
+    description: |
+      Passphrase for the GPG key
+    required: false
+
+  armor:
+    description: |
+      Create ASCII armored output
+    required: false
+    default: 'true'
+
+  detach_sign:
+    description: |
+      Make a detached signature
+    required: false
+
+  clear_sign:
+    description: |
+      Make a clear text signature
+    required: false
+
+  files:
+    description: |
+      List of files to create a signature
+    required: true
+
+  excludes:
+    description: |
+      List of files to exclude from signing
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/actionhippie/gpgsign:v1'
+
+...
