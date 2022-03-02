@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-set -eo pipefail
+set -e
+set -o pipefail
+set -o noglob
 
-# echo "${INPUT_PRIVATE_KEY}" | gpg --batch --import -
+echo "${INPUT_PRIVATE_KEY}" | gpg --batch --import -
 pushd "${GITHUB_WORKSPACE}" >/dev/null
     ARGS=(
         --batch
@@ -12,29 +14,57 @@ pushd "${GITHUB_WORKSPACE}" >/dev/null
         ARGS+=(--pinentry-mode loopback --passphrase-fd 0)
     fi
 
-    if [[ -n "${INPUT_ARMOR}" -a "${INPUT_ARMOR}" == "true" ]]; then
+    if [[ -n "${INPUT_ARMOR}" && "${INPUT_ARMOR}" == "true" ]]; then
         ARGS+=(--armor)
     fi
 
-    if [[ -n "${INPUT_DETACH_SIGN}" -a "${INPUT_DETACH_SIGN}" == "true" ]]; then
+    if [[ -n "${INPUT_DETACH_SIGN}" && "${INPUT_DETACH_SIGN}" == "true" ]]; then
         ARGS+=(--detach-sign)
-    elif [[ -n "${INPUT_CLEAR_SIGN}" -a "${INPUT_CLEAR_SIGN}" == "true" ]]; then
+    elif [[ -n "${INPUT_CLEAR_SIGN}" && "${INPUT_CLEAR_SIGN}" == "true" ]]; then
         ARGS+=(--clear-sign)
     else
         ARGS+=(--sign)
     fi
 
     INCLUDES=()
-    for INCLUDE in ${INPUT_FILES}; do
+    FIRST=true
+    while IFS= read -r INCLUDE; do
+        [[ "${INCLUDE}" == "" ]] && continue
+
+        if [[ "${FIRST}" != "true" ]]; then
+            INCLUDES+=(-or)
+        fi
+
         INCLUDES+=(-path "${GITHUB_WORKSPACE}/${INCLUDE}")
-    done
+        FIRST=false
+    done <<< "${INPUT_FILES}"
+
+    if [[ ${#INCLUDES[@]} -ne 0 ]]; then
+        INCLUDE_STATEMENT+="( ${INCLUDES[@]} )"
+    else
+        INCLUDE_STATEMENT=""
+    fi
 
     EXCLUDES=()
-    for EXCLUDE in ${INPUT_EXCLUDES}; do
-        EXCLUDES+=(! -path "${GITHUB_WORKSPACE}/${EXCLUDE}")
-    done
+    FIRST=true
+    while IFS= read -r EXCLUDE; do
+        [[ "${EXCLUDE}" == "" ]] && continue
 
-    for FILE in $(find ${GITHUB_WORKSPACE} "${INCLUDES[@]}" "${EXCLUDES[@]}"); do
-        echo gpg "${ARGS[@]}"
+        if [[ "${FIRST}" != "true" ]]; then
+            EXCLUDES+=(-and)
+        fi
+
+        EXCLUDES+=(-not -path "${GITHUB_WORKSPACE}/${EXCLUDE}")
+        FIRST=false
+    done <<< "${INPUT_EXCLUDES}"
+
+    if [[ ${#EXCLUDES[@]} -ne 0 ]]; then
+        EXCLUDE_STATEMENT+="-and ( ${EXCLUDES[@]} )"
+    else
+        EXCLUDE_STATEMENT=""
+    fi
+
+    for FILE in $(find ${GITHUB_WORKSPACE} ${INCLUDE_STATEMENT} ${EXCLUDE_STATEMENT}); do
+        gpg "${ARGS[@]}" "${FILE}"
     done
 popd >/dev/null
