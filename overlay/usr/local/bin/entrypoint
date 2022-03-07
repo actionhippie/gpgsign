@@ -18,9 +18,9 @@ pushd "${GITHUB_WORKSPACE}" >/dev/null
         ARGS+=(--armor)
     fi
 
-    if [[ -n "${INPUT_DETACH_SIGN}" && "${INPUT_DETACH_SIGN}" == "true" ]]; then
+    if [[ "${INPUT_DETACH_SIGN}" == "true" || "${INPUT_DETACH_SIGN}" == "1" ]]; then
         ARGS+=(--detach-sign)
-    elif [[ -n "${INPUT_CLEAR_SIGN}" && "${INPUT_CLEAR_SIGN}" == "true" ]]; then
+    elif [[ "${INPUT_CLEAR_SIGN}" == "true" || "${INPUT_CLEAR_SIGN}" == "1" ]]; then
         ARGS+=(--clear-sign)
     else
         ARGS+=(--sign)
