@@ -43,7 +43,7 @@ Passphrase for the GPG key
 
 ### `armor`
 
-Create ASCII armored output
+Create ASCII armored output, defaults to `true`
 
 ### `detach_sign`
 

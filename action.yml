@@ -16,7 +16,7 @@ inputs:
 
   armor:
     description: |
-      Create ASCII armored output
+      Create ASCII armored output, defaults to `true`
     required: false
     default: 'true'
 
