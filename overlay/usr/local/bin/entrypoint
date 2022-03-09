@@ -65,6 +65,12 @@ pushd "${GITHUB_WORKSPACE}" >/dev/null
     fi
 
     for FILE in $(find ${GITHUB_WORKSPACE} ${INCLUDE_STATEMENT} ${EXCLUDE_STATEMENT}); do
+        if [[ -n "${INPUT_PASSPHRASE}" ]]; then
+            echo "${INPUT_PASSPHRASE}" | gpg "${ARGS[@]}" "${FILE}"
+        else
+            gpg "${ARGS[@]}" "${FILE}"
+        fi
+
         gpg "${ARGS[@]}" "${FILE}"
     done
 popd >/dev/null
