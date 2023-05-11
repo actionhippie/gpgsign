@@ -1,6 +1,6 @@
 # gpgsign
 
-[![Current Tag](https://img.shields.io/github/v/tag/actionhippie/gpgsign?sort=semver)](https://github.com/actionhippie/gpgsign) [![Docker Build](https://github.com/actionhippie/gpgsign/workflows/docker/badge.svg)](https://github.com/actionhippie/gpgsign/actions?query=workflow%3Adocker)
+[![Current Tag](https://img.shields.io/github/v/tag/actionhippie/gpgsign?sort=semver)](https://github.com/actionhippie/gpgsign) [![Docker Build](https://github.com/actionhippie/gpgsign/workflows/docker/badge.svg)](https://github.com/actionhippie/gpgsign/actions/workflows/docker.yml)
 
 [GitHub Action](https://github.com/features/actions) to sign artifacts or any file with GnuPG.
 
