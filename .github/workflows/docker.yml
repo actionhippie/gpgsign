@@ -26,9 +26,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           images: ghcr.io/${{ github.repository }}
-          flavor: |
-            latest=true
           tags: |
+            type=ref,enable=true,event=branch
             type=ref,enable=true,event=tag
             type=semver,pattern=v{{version}}
             type=semver,pattern=v{{major}}.{{minor}}
