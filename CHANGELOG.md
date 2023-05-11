@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/actionhippie/gpgsign/compare/v1.0.0...v1.1.0) (2023-05-11)
+
+
+### Features
+
+* add gnupg-keyboxd as it is a separate package ([1391ebd](https://github.com/actionhippie/gpgsign/commit/1391ebd502827e2a824d32c811236a2cc674367b))
+* **deps:** update alpine docker tag to v3.18 ([311d84a](https://github.com/actionhippie/gpgsign/commit/311d84a36c79aaff0e9586cd1fc306af50d6ae3b))
+
 ## 1.0.0 (2023-05-11)
 
 
