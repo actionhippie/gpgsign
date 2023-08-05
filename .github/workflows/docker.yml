@@ -59,6 +59,7 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           platforms: linux/amd64
+          provenance: false
           push: ${{ github.event_name != 'pull_request' }}
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
