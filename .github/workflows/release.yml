@@ -26,7 +26,7 @@ jobs:
         with:
           extra_plugins: |
             @semantic-release/exec
-            conventional-changelog-conventionalcommits
+            conventional-changelog-conventionalcommits@6.1.0
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9

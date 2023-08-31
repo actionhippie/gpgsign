@@ -110,7 +110,7 @@
         [
             "@semantic-release/github",
             {
-                "addReleases": true
+                "publish": true
             }
         ]
     ]
