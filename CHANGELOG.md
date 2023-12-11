@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/actionhippie/gpgsign/compare/v1.1.0...v1.2.0) (2023-12-11)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.19 ([11235a9](https://github.com/actionhippie/gpgsign/commit/11235a9fb1027a215c9bd684657344485c86b67d))
+
 ## [1.1.0](https://github.com/actionhippie/gpgsign/compare/v1.0.0...v1.1.0) (2023-05-11)
 
 
