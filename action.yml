@@ -42,6 +42,6 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/actionhippie/gpgsign:v1.4.0'
+  image: 'docker://ghcr.io/actionhippie/gpgsign:v1.5.0'
 
 ...

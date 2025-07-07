@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/actionhippie/gpgsign/compare/v1.4.0...v1.5.0) (2025-07-07)
+
+
+### Features
+
+* **deps:** update alpine docker tag to v3.22 ([#21](https://github.com/actionhippie/gpgsign/issues/21)) ([1f2aecb](https://github.com/actionhippie/gpgsign/commit/1f2aecb7191bf22c1634d5b83f1c7129ff18e612))
+* replace release workflow and add workflow langserver ref ([3b4d82c](https://github.com/actionhippie/gpgsign/commit/3b4d82ca978a8b02d219d569cd460daba1b7049d))
+
 ## [1.4.0](https://github.com/actionhippie/gpgsign/compare/v1.3.0...v1.4.0) (2024-12-09)
 
 
