@@ -1,7 +1,11 @@
 ---
-name: 'gpgsign'
+# yaml-language-server: $schema=https://www.schemastore.org/github-action.json
+name: 'actionhippie-gpgsign'
 description: 'Sign artifacts or any file with GnuPG'
 author: 'actionhippie'
+branding:
+  icon: book
+  color: green
 
 inputs:
   private_key:

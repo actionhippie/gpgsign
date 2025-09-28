@@ -3,9 +3,12 @@
 name: release
 
 "on":
+  workflow_dispatch:
   schedule:
     - cron: "0 8 * * 1"
-  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   release:
@@ -33,5 +36,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
         run: semantic-release
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: GitHub Actions
+          author_email: github@webhippie.de
+          add: .github/RELEASE
+          message: "docs: automated release update [skip ci]"
+          push: true
+          commit: --signoff
 
 ...
