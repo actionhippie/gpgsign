@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/actionhippie/gpgsign/compare/v1.5.0...v1.5.1) (2025-09-29)
+
+
+### Bugfixes
+
+* **deps:** pin alpine docker tag to 4bcff63 ([#24](https://github.com/actionhippie/gpgsign/issues/24)) ([8e15055](https://github.com/actionhippie/gpgsign/commit/8e15055b81a1f34a60fddcd65bcb6fc84af2bd86))
+
 ## [1.5.0](https://github.com/actionhippie/gpgsign/compare/v1.4.0...v1.5.0) (2025-07-07)
 
 
