@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/actionhippie/gpgsign/compare/v1.5.2...v1.6.0) (2025-11-10)
+
+
+### Features
+
+* integrate amd64 and arm64 support ([14fb10e](https://github.com/actionhippie/gpgsign/commit/14fb10eaabc0c4c0eefee5f2660d8807ad408d53))
+
 ## [1.5.2](https://github.com/actionhippie/gpgsign/compare/v1.5.1...v1.5.2) (2025-10-13)
 
 ## [1.5.1](https://github.com/actionhippie/gpgsign/compare/v1.5.0...v1.5.1) (2025-09-29)
