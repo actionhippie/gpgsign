@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.7.1](https://github.com/actionhippie/gpgsign/compare/v1.7.0...v1.7.1) (2025-12-22)
+
 ## [1.7.0](https://github.com/actionhippie/gpgsign/compare/v1.6.0...v1.7.0) (2025-12-08)
 
 ## [1.6.0](https://github.com/actionhippie/gpgsign/compare/v1.5.2...v1.6.0) (2025-11-10)
