@@ -95,9 +95,26 @@
             }
         ],
         [
-            "@semantic-release/exec",
+            "semantic-release-replace-plugin",
             {
-                "prepareCmd": "./hack/action-version.sh ${nextRelease.version}"
+                "replacements": [
+                    {
+                        "files": [
+                            "action.yml"
+                        ],
+                        "from": "docker://ghcr.io/actionhippie/gpgsign:.*",
+                        "to": "docker://ghcr.io/actionhippie/gpgsign:${nextRelease.version}",
+                        "results": [
+                            {
+                                "file": "action.yml",
+                                "hasChanged": true,
+                                "numMatches": 1,
+                                "numReplacements": 1
+                            }
+                        ],
+                        "countMatches": true
+                    }
+                ]
             }
         ],
         [
