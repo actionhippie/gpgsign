@@ -102,8 +102,8 @@
                         "files": [
                             "action.yml"
                         ],
-                        "from": "docker://ghcr.io/actionhippie/gpgsign:.*",
-                        "to": "docker://ghcr.io/actionhippie/gpgsign:${nextRelease.version}",
+                        "from": "'docker://ghcr.io/actionhippie/gpgsign:.*'",
+                        "to": "'docker://ghcr.io/actionhippie/gpgsign:${nextRelease.version}'",
                         "results": [
                             {
                                 "file": "action.yml",
