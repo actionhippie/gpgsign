@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.7.3](https://github.com/actionhippie/gpgsign/compare/v1.7.2...v1.7.3) (2026-02-02)
+
+### Dependencies
+
+* **patch:** update alpine:3.23 docker digest to 2510918 ([#47](https://github.com/actionhippie/gpgsign/issues/47)) ([466d271](https://github.com/actionhippie/gpgsign/commit/466d2718213162c709aea7c541f5174cacf080a4))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([579cd6d](https://github.com/actionhippie/gpgsign/commit/579cd6d4ed6d81ab7a28466664dac880303e3f79))
+* **flake:** updated lockfile [skip ci] ([8df87ab](https://github.com/actionhippie/gpgsign/commit/8df87ab1799a412001b0913b435fdf2a1cd54a43))
+
 ## [1.7.2](https://github.com/actionhippie/gpgsign/compare/v1.7.1...v1.7.2) (2026-01-19)
 
 ### Bugfixes
