@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.7.4](https://github.com/actionhippie/gpgsign/compare/v1.7.3...v1.7.4) (2026-04-20)
+
+### Dependencies
+
+* **patch:** update alpine:3.23 docker digest to 5b10f43 ([#55](https://github.com/actionhippie/gpgsign/issues/55)) ([bb17881](https://github.com/actionhippie/gpgsign/commit/bb1788132bbaadb4122ee390c9b98386b9b12a47))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([07156ab](https://github.com/actionhippie/gpgsign/commit/07156abe2172d2b22ba1058d6afeba97ed23bbd3))
+* **flake:** updated lockfile [skip ci] ([72a4318](https://github.com/actionhippie/gpgsign/commit/72a4318614072e28348be4425419d8786ce8ba77))
+* **flake:** updated lockfile [skip ci] ([a62112d](https://github.com/actionhippie/gpgsign/commit/a62112d6ffb8570c11ae3d0c1c7efcb85117bf89))
+* **flake:** updated lockfile [skip ci] ([329de06](https://github.com/actionhippie/gpgsign/commit/329de06b0dd9c1b702833cf886923206d4cc4290))
+* **flake:** updated lockfile [skip ci] ([b59d2e5](https://github.com/actionhippie/gpgsign/commit/b59d2e57d474ee72c10d7747715fc807090fd4c9))
+* **flake:** updated lockfile [skip ci] ([dc1d715](https://github.com/actionhippie/gpgsign/commit/dc1d7156ffc67e383fbe565fa0ab4dbadab61d16))
+* **flake:** updated lockfile [skip ci] ([04723b8](https://github.com/actionhippie/gpgsign/commit/04723b8a74a8f222dd2d5a6772aa42b53e857eb7))
+* **flake:** updated lockfile [skip ci] ([7eb8fb3](https://github.com/actionhippie/gpgsign/commit/7eb8fb38a3bc1021d5145e168689ecad83ceefed))
+* **flake:** updated lockfile [skip ci] ([a926d9f](https://github.com/actionhippie/gpgsign/commit/a926d9f7cdb9e1eb49ccd73e1e63759375ad663a))
+* **flake:** updated lockfile [skip ci] ([198831b](https://github.com/actionhippie/gpgsign/commit/198831b0e7f9253dfb46d2512272a226be600f3d))
+* **flake:** updated lockfile [skip ci] ([47fe045](https://github.com/actionhippie/gpgsign/commit/47fe045a6e92d343d0bbe855a61e411c916a67a5))
+
 ## [1.7.3](https://github.com/actionhippie/gpgsign/compare/v1.7.2...v1.7.3) (2026-02-02)
 
 ### Dependencies
