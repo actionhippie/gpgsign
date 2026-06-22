@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.1](https://github.com/actionhippie/gpgsign/compare/v1.8.0...v1.8.1) (2026-06-22)
+
+### Dependencies
+
+* **patch:** update docker digests ([#59](https://github.com/actionhippie/gpgsign/issues/59)) ([ae57274](https://github.com/actionhippie/gpgsign/commit/ae572742b5cef995560d522e6385b9439e40915a))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([4f5560f](https://github.com/actionhippie/gpgsign/commit/4f5560f96475f2383e47ae7e313f9dd8fc0755ab))
+
 ## [1.8.0](https://github.com/actionhippie/gpgsign/compare/v1.7.4...v1.8.0) (2026-06-15)
 
 ### Dependencies
